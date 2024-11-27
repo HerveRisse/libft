@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void *ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	if (dst < src)
 	{
@@ -28,11 +28,11 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else
 	{
-		i = n - 1;
+		i = n;
 		while (i > 0)
 		{
-			*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 			i--;
+			*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
 		}
 		return (dst);
 	}
@@ -40,14 +40,14 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 /*
 int     main(void)
 {
-        char    str[] = "hello there !";
-        char    str2[] = "holla there !";
-        size_t  n = 5;
+		char    str[] = "hello there !";
+		char    str2[] = "holla there !";
+		size_t  n = 5;
 
-        printf("%s\n", str);
-        printf("%s\n", str2);
-        printf("%s\n", (char *)ft_memmove(str2, str, n));
-        printf("%s\n", str2);
-        printf("%s\n", (char *)ft_memmove((str + 3), str, n));
-        return (0);
+		printf("%s\n", str);
+		printf("%s\n", str2);
+		printf("%s\n", (char *)ft_memmove(str2, str, n));
+		printf("%s\n", str2);
+		printf("%s\n", (char *)ft_memmove((str + 3), str, n));
+		return (0);
 }*/

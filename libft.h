@@ -15,6 +15,10 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdint.h>
 
 /* libcf */
 int ft_isalpha(int c);
