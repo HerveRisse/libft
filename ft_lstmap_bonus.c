@@ -1,32 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 21:58:48 by hrisse            #+#    #+#             */
+/*   Updated: 2024/12/02 22:01:23 by hrisse           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-    t_list *start;
-    t_list *current;
+	t_list	*start;
+	t_list	*current;
 
-    if (!lst || !f || !del)
-        return (NULL);
-
-    start = ft_lstnew(f(lst->content));
-    if (!start)
-        return (NULL);
-
-    current = start;
-    lst = lst->next;
-
-    while (lst)
-    {
-        current->next = ft_lstnew(f(lst->content));
-        if (!current->next)
-        {
-            ft_lstclear(&start, del);
-            return (NULL);
-        }
-        current = current->next;
-        lst = lst->next;
-    }
-    return (start);
+	if (!lst || !f || !del)
+		return (NULL);
+	start = ft_lstnew(f(lst->content));
+	if (!start)
+		return (NULL);
+	current = start;
+	lst = lst->next;
+	while (lst)
+	{
+		current->next = ft_lstnew(f(lst->content));
+		if (!current->next)
+		{
+			ft_lstclear(&start, del);
+			return (NULL);
+		}
+		current = current->next;
+		lst = lst->next;
+	}
+	return (start);
 }
 /*
 void *x_two(void *content)

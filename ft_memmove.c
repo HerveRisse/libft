@@ -6,15 +6,15 @@
 /*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 07:12:48 by hrisse            #+#    #+#             */
-/*   Updated: 2024/11/19 12:31:03 by hrisse           ###   ########.fr       */
+/*   Updated: 2024/12/02 22:14:30 by hrisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	if (dst < src)
 	{

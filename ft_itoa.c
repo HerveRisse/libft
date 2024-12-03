@@ -6,7 +6,7 @@
 /*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 17:14:21 by hrisse            #+#    #+#             */
-/*   Updated: 2024/11/13 17:14:31 by hrisse           ###   ########.fr       */
+/*   Updated: 2024/12/02 22:06:07 by hrisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_itoa(int n)
 	size_t	size;
 	long	nb;
 	char	*str;
-	int	is_negative;
+	long	is_negative;
 
 	size = count_size((long) n);
 	str = (char *) malloc(sizeof(char) * (size + 1));

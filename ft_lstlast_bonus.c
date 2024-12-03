@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 22:02:04 by hrisse            #+#    #+#             */
+/*   Updated: 2024/12/02 22:02:27 by hrisse           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    while (lst && lst->next)
-        lst = lst->next;
-    return (lst);
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
 }
 /*
 int main(void)

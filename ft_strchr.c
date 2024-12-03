@@ -6,15 +6,15 @@
 /*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 07:37:49 by hrisse            #+#    #+#             */
-/*   Updated: 2024/11/19 11:56:15 by hrisse           ###   ########.fr       */
+/*   Updated: 2024/12/02 22:07:05 by hrisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

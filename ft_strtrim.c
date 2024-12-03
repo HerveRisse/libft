@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/12/02 22:14:44 by hrisse            #+#    #+#             */
+/*   Updated: 2024/12/02 22:17:19 by hrisse           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static char	*to_start(char const *s1, char const *set)
@@ -30,7 +42,7 @@ static char	*to_end(char const *s1, char const *set, char const *start)
 {
 	size_t	i;
 	size_t	j;
-	int	in_set;
+	int		in_set;
 
 	in_set = 0;
 	i = ft_strlen(s1) - 1;
