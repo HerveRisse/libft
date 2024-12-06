@@ -6,7 +6,7 @@
 /*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 22:02:04 by hrisse            #+#    #+#             */
-/*   Updated: 2024/12/02 22:02:27 by hrisse           ###   ########.fr       */
+/*   Updated: 2024/12/04 11:42:16 by hrisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
+	if (!lst)
+		return (NULL);
 	while (lst && lst->next)
 		lst = lst->next;
 	return (lst);

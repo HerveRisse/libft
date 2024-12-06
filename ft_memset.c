@@ -16,6 +16,8 @@ void	*ft_memset( void *dst, int c, size_t size)
 {
 	size_t	i;
 
+	if (!dst)
+		return (NULL);
 	i = 0;
 	while (i < size)
 	{

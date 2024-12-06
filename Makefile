@@ -6,7 +6,7 @@
 #    By: hrisse <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/13 06:37:27 by hrisse            #+#    #+#              #
-#    Updated: 2024/11/19 11:13:29 by hrisse           ###   ########.fr        #
+#    Updated: 2024/12/05 09:13:27 by hrisse           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean
-	all
+re: fclean all
 
 .PHONY: all clean fclean re

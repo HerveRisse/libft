@@ -18,6 +18,8 @@ static char	*to_start(char const *s1, char const *set)
 	size_t	j;
 	int		in_set;
 
+	if (!s1 || !set)
+		return (NULL);
 	in_set = 0;
 	i = 0;
 	j = 0;
@@ -71,6 +73,8 @@ static char	*trimmed_str(char const *start, char const *end)
 	char	*new;
 	size_t	i;
 
+	if (!start || !end)
+		return (NULL);
 	new = malloc(sizeof(char) * (end - start + 2));
 	if (!new)
 		return (NULL);
@@ -90,6 +94,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*end;
 	char	*new;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = to_start(s1, set);
 	end = to_end(s1, set, s1);
 	if (!s1[0] || end < start)

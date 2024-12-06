@@ -17,6 +17,8 @@ static size_t	count_words(char const *s, char c)
 	size_t	words;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	words = 0;
 	i = 0;
 	while (s[i])
@@ -32,6 +34,8 @@ static void	fill_tab(char *new, char const *s, char c)
 {
 	size_t	i;
 
+	if (!new || !s)
+		return ;
 	i = 0;
 	while (s[i] && s[i] != c)
 	{
@@ -74,6 +78,8 @@ char	**ft_split(char const *s, char c)
 	size_t	words;
 	char	**tab;
 
+	if (!s)
+		return (NULL);
 	words = count_words(s, c);
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)

@@ -6,7 +6,7 @@
 /*   By: hrisse <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 21:57:28 by hrisse            #+#    #+#             */
-/*   Updated: 2024/12/02 21:58:02 by hrisse           ###   ########.fr       */
+/*   Updated: 2024/12/04 11:42:54 by hrisse           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!lst || !f)
+		return ;
 	while (lst && f)
 	{
 		f(lst->content);
